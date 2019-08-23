@@ -50,6 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
 export default function Login() {
   const classes = useStyles();
 
@@ -61,7 +62,7 @@ export default function Login() {
         <img src={logo} alt="HTML5" width={100} height={100}></img>
        
         <Typography component="h1" variant="h5">
-          Sign in
+          Log in
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -86,19 +87,25 @@ export default function Login() {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+          
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            style={{
+              borderRadius: 5,
+              backgroundColor: "#5fc092",
+              padding: "10px 36px",
+              fontSize: "14px"
+          }}
           >
-            Sign In
+            Log In
           </Button>
+
+          
+
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
