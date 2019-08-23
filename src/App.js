@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Dashboard from "./components/Dashboard";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
 
@@ -19,6 +20,7 @@ function App() {
                   <Route path="/" component={Home} exact/>
                   <Route path="/About" component={About}/>
                   <Route path="/Contact" component={Contact}/>
+                  <Route path="/Dashboard" component={Dashboard}/>
                   <Route component={Error}/>
                 </Switch>
           </div>

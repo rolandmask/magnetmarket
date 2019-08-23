@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
       <div className="pager">
- <p>Home page</p>
+        <p>Home page</p>
       </div>
     );
 
