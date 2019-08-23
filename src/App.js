@@ -8,6 +8,7 @@ import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                   <Route path="/About" component={About}/>
                   <Route path="/Contact" component={Contact}/>
                   <Route path="/Dashboard" component={Dashboard}/>
+                  <Route path="/Login" component={Login}/>
                   <Route component={Error}/>
                 </Switch>
           </div>
