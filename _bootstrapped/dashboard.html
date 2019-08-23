@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <title>MAGNET.MARKET</title>
+  </head>
+  <body>
+<center>
+    <div class="container-fluid">
+      <div class="row-fluid" >
+          <div class="col-sm-6 text-center" style="padding:10px; padding-top:50px;" >
+              <img src="images/user.svg" height="200" width="200"/>
+            <strong><p>USERNAME: Name Name</p></strong>
+            <p>Joined: 01/03/20</p>
+            <p>Total sales: 3046 MAG</p>
+
+          </div>
+          <div class="col-sm-6 text-center" >
+     
+        <center>
+        <div class="panel panel-default" id="dropBox">
+          <div class="panel-heading" ><h4><strong>START SELLING</strong> </h4><small>Upload files and start item listing process here</small></div>
+          <div class="panel-body">
+  
+            <!-- Standar Form -->
+            <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+              <div class="form-inline">
+                <div class="form-group">
+                  <input type="file" name="files[]" id="js-upload-files" multiple>
+                </div>
+                <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+              </div>
+            </form><br><br>
+  
+            <!-- Drop Zone -->
+            <center>
+            <div class="upload-drop-zone " id="drop-zone">
+              Drag and drop files here
+            </div>
+            </center>
+            </div>
+          </div>
+        </center>
+        </div>
+      </div>
+
+
+<div class="dashItems">   
+
+
+    
+  
+            <!-- Progress Bar 
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                <span class="sr-only">60% Complete</span>
+              </div>
+            </div>-->
+  
+            <!-- Upload Finished 
+            <div class="js-upload-finished">
+              <h3>Processed files</h3>
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  /container -->
+  
+  </div>
+
+<div id="dashHero">
+
+   <!-- Editable table -->
+        <div class="card">
+            <h5 class="card-header text-center font-weight-bold text-uppercase py-4" style="float:left;">LISTED ITEMS (2) </h5>
+            <div class="card-body">
+              <div id="table" class="table-editable">
+                <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                      class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                <table class="table table-bordered table-responsive-md text-center">
+                  <thead>
+                    <tr>
+                      <th class="text-center">ID</th>
+                      <th class="text-center">Item Name</th>
+                      <th class="text-center">First listed</th>
+                      <th class="text-center">Price (MAG)</th>
+                      <th class="text-center">Sells</th>
+                      <th class="text-center">Active</th>
+                      <th class="text-center">Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                     <!-- table line -->
+                    <tr>
+                      <td class="pt-3-half" >P001</td>
+                      <td class="pt-3-half" id="edits" contenteditable="false">HD Pictures set 001</td>
+                      <td class="pt-3-half" >30/07/2019</td>
+                      <td class="pt-3-half" id="edits" contenteditable="false">300</td>
+                      <td class="pt-3-half" >134</td>
+                      <td class="pt-3-half" >
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="checkBox">
+                            </div>
+                      </td>
+                      
+                      <td>
+                        <span class="table-remove"><button type="button"
+                            class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#myModal">X</button></span>
+                      </td>
+                    </tr>
+                    <!-- table line -->
+                    <tr>
+                      <td class="pt-3-half" >V0043</td>
+                      <td class="pt-3-half" id="edits" contenteditable="false">Car Videos set 003</td>
+                      <td class="pt-3-half" >13/02/2019</td>
+                      <td class="pt-3-half" id="edits" contenteditable="false">1200</td>
+                      <td class="pt-3-half" >17</td>
+                      <td class="pt-3-half" >
+                          <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="checkBox1">
+                            </div>
+                      </td>
+                      
+                      <td>
+                        <span class="table-X"><button type="button" 
+                            class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#myModal">X</button></span>
+                      </td>
+                    </tr>
+                   
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+  <!-- table end -->
+<div class="container-fluid">
+    <button type="button" id="SaveBtn" disabled onclick="SaveClick()"
+    class="btn btn-primary btn-rounded btn-sm my-0">SAVE</button>
+
+    <span class="table-remove"><button type="button" id="EditBtn" onclick="EditClick()"
+      class="btn btn-primary btn-rounded btn-sm my-0">EDIT</button></span>
+
+  
+</div>
+
+
+</div> 
+</center>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="myModalLabel">WARNING!</h4>
+        </div>
+        <div class="modal-body">
+          
+          You are deleting a listing item. <br /><br>
+          Are You sure? <br/>
+          
+          
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">REMOVE</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+
+
+<script>
+
+function EditClick (){
+        // document.getElementById("kol").innerHTML = "Hello World";
+        // document.getElementsByTagName("edits").contentEditable="true";
+        var editableElements = document.querySelectorAll("[contenteditable=false]");
+
+        for (var i = 0; i < editableElements.length; ++i) {
+            editableElements[i].setAttribute("contentEditable", true);
+            editableElements[i].style.backgroundColor = "AliceBlue";
+        }
+
+        document.getElementById('EditBtn').disabled = true;
+        document.getElementById('SaveBtn').disabled = false;
+} 
+
+function SaveClick (){
+        // document.getElementById("kol").innerHTML = "Hello World";
+        // document.getElementsByTagName("edits").contentEditable="false";
+        var editableElements = document.querySelectorAll("[contenteditable=true]");
+
+        for (var i = 0; i < editableElements.length; ++i) {
+            editableElements[i].setAttribute("contentEditable", false);
+            editableElements[i].style.backgroundColor = "white";
+        }
+
+        document.getElementById('EditBtn').disabled = false;
+        document.getElementById('SaveBtn').disabled = true;
+} 
+
++ function($) {
+    'use strict';
+
+    // UPLOAD CLASS DEFINITION
+    // ======================
+
+    var dropZone = document.getElementById('drop-zone');
+    var uploadForm = document.getElementById('js-upload-form');
+
+    var startUpload = function(files) {
+        console.log(files)
+    }
+
+    uploadForm.addEventListener('submit', function(e) {
+        var uploadFiles = document.getElementById('js-upload-files').files;
+        e.preventDefault()
+
+        startUpload(uploadFiles)
+    })
+
+    dropZone.ondrop = function(e) {
+        e.preventDefault();
+        this.className = 'upload-drop-zone';
+
+        startUpload(e.dataTransfer.files)
+    }
+
+    dropZone.ondragover = function() {
+        this.className = 'upload-drop-zone drop';
+        return false;
+    }
+
+    dropZone.ondragleave = function() {
+        this.className = 'upload-drop-zone';
+        return false;
+    }
+
+}(jQuery);
+
+</script>
+
+
+  </body>
+</html>

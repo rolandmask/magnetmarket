@@ -1,0 +1,77 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0px;
+}
+
+.dashItems {
+  width: 70vw;
+  display: inline-block;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.url-table {
+  th{
+    text-align:center;
+  }
+  td {
+    vertical-align: text-bottom;
+    padding-bottom: 3px;
+  }
+
+  input {
+    box-sizing: border-box;
+  }
+
+  input:not(.active),
+  label:not(.active),
+  div:not(.active),
+  p:not(.active) {
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: inherit;
+  }
+}
+
+#dashHero {
+  padding-bottom: 80px;
+  padding-top: 40px;
+  padding: 20px;
+  max-width: 1500px;
+}
+
+.card {
+ position: relative; 
+}
+
+/* layout.css Style */
+.upload-drop-zone {
+  height: 100px;
+  width: 20vw;
+  min-width: 300px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 100px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #71d189;
+  border-color: #71d189;
+}
+
+#dropBox {
+  max-width: 500px;
+  min-width: 360px;
+  margin-top: 50px;
+}

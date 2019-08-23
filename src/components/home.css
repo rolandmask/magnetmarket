@@ -83,7 +83,8 @@ body {
 }
 
 .pager {
-  align-content: center;
+  text-align: center;
+  color: #5ec092;
 }
 
 
