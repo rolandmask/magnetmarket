@@ -3,8 +3,8 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home";
-import Contact from "./components/Contact";
-import About from "./components/About";
+import Signup from "./components/Signup";
+import ItemPage from "./components/ItemPage";
 import Dashboard from "./components/Dashboard";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
@@ -19,8 +19,8 @@ function App() {
             <Navigation/>
                 <Switch>
                   <Route path="/" component={Home} exact/>
-                  <Route path="/About" component={About}/>
-                  <Route path="/Contact" component={Contact}/>
+                  <Route path="/ItemPage" component={ItemPage}/>
+                  <Route path="/Signup" component={Signup}/>
                   <Route path="/Dashboard" component={Dashboard}/>
                   <Route path="/Login" component={Login}/>
                   <Route component={Error}/>

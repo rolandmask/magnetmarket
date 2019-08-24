@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 
  
 
-const Contact = () => {
+const ItemPage = () => {
   const classes = useStyles();
     return  (
       <Container component="main" maxWidth="xs">
@@ -54,4 +54,4 @@ const Contact = () => {
 
 };
 
-export default Contact;
+export default ItemPage;

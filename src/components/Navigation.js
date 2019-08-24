@@ -6,8 +6,8 @@ const Navigation = () => {
     return (
       <div id="mainNav">
         <NavLink to="/">HOME</NavLink> / 
-        <NavLink to="/About">ABOUT</NavLink> / 
-        <NavLink to="/Contact">CONTACT</NavLink> /
+        <NavLink to="/ItemPage">ITEMPAGE</NavLink> / 
+        <NavLink to="/Signup">SIGNUP</NavLink> /
         <NavLink to="/Login">LOGIN</NavLink> /
         <NavLink to="/Dashboard">DASHBOARD</NavLink>
       </div>
