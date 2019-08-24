@@ -9,6 +9,7 @@ import Dashboard from "./components/Dashboard";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
 import Login from "./components/Login";
+import Listing from "./components/Listing";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                   <Route path="/Signup" component={Signup}/>
                   <Route path="/Dashboard" component={Dashboard}/>
                   <Route path="/Login" component={Login}/>
+                  <Route path="/Listing" component={Listing}/>
                   <Route component={Error}/>
                 </Switch>
           </div>
