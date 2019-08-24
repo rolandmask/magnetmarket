@@ -7,7 +7,7 @@ Website is being built with [Create React App](https://github.com/facebook/creat
 
 ## Build and run it Yourself
 
-1. Download or clone the repo.
+1. Download or clone the repo - https://github.com/rolandmask/magnetmarket
 
 2. In the main directory run:
    ```shell
@@ -27,4 +27,4 @@ Website is being built with [Create React App](https://github.com/facebook/creat
 
 ## License
 
-Create React App is open source software [licensed as MIT](https://github.com/rolandmask/magnetmarket/blob/master/LICENSE).
+Magnet.market website is open source software [licensed as MIT](https://github.com/rolandmask/magnetmarket/blob/master/LICENSE).
