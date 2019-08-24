@@ -1,57 +1,66 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import logo from '../images/logo.svg'
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Button from '@material-ui/core/Button';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://magnet.market/">
-        Magnet.Market
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
-
-const useStyles = makeStyles(theme => ({
-  '@global': {
-    body: {
-      backgroundColor: theme.palette.common.white,
-    },
-  },
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-}));
-
-
-
+export default function Listing() {
  
 
-const Listing = () => {
-  const classes = useStyles();
-    return  (
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-        <img src={logo} alt="HTML5" width={100} height={100}></img>
-          
-        </div>
-        <Box mt={8}>
-          <Copyright />
-        </Box>
-      </Container>
-    );
-
-};
-
-export default Listing;
+  return (
+    <div id="ListingForm">
+    <React.Fragment>
+      <Typography variant="h6" gutterBottom>
+        Listing Form
+      </Typography>
+      <Grid container spacing={3}>
+             
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            name="address1"
+            label="ITEM NAME"
+            fullWidth
+          />
+        </Grid>
+                <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            label="PRICE"
+            fullWidth
+            autoComplete="billing address-level2"
+          />
+        </Grid>
+        <Grid item xs={12} >
+          <TextField  label="DESCRIPTION" fullWidth />
+        </Grid>
+        
+        <Grid item xs={12} >
+          <FormControlLabel
+            control={<Checkbox color="default" value="yes" style={{color: "#5fc092"}} />}
+            label="PHYSICAL ITEM"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <FormControlLabel
+            control={<Checkbox color="primary" value="yes" style={{color: "#5fc092"}} />}
+            label="SERVICE"
+          />
+        </Grid>
+        <grid>
+          <Button onClick={() => {alert('Item Listed!')}} 
+            variant="contained"
+            color="primary"
+            style={{ marginTop: "20px", padding: "16px"}} 
+          >
+            List Item Now
+          </Button>
+         
+        </grid> 
+      </Grid>
+    </React.Fragment>
+    </div>
+  );
+}
