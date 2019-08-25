@@ -7,7 +7,7 @@ Website is being built with [Create React App](https://github.com/facebook/creat
 
 ## Build and run it Yourself
 
-1. Download or clone the repo - https://github.com/rolandmask/magnetmarket
+1. Download or clone the repository - https://github.com/rolandmask/magnetmarket
 
 2. In the main directory run:
    ```shell

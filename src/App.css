@@ -1,9 +1,7 @@
 
 #mainNav {
   height: 50px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
+  
   text-align: right;
   padding: 16px;
 }
@@ -19,7 +17,21 @@
 
 #ListingForm {
   width: 80vh;
-  padding: 20px;
+  padding-top: 100px;
   margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
   
+}
+
+#ItemPage {
+  width: 80vh;
+  padding-top: 100px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#ItemTxt {
+  padding-top: 20px;
 }
