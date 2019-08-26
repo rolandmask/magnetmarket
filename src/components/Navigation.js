@@ -5,12 +5,12 @@ const Navigation = () => {
 
     return (
       <div id="mainNav">
-        <NavLink to="/">HOME</NavLink> ·&nbsp; 
+        <NavLink exact to="/">HOME</NavLink> ·&nbsp; 
         <NavLink to="/ItemPage">ITEMPAGE</NavLink> ·&nbsp; 
         <NavLink to="/Listing">LISTING</NavLink> ·&nbsp; 
         <NavLink to="/Signup">SIGNUP</NavLink> ·&nbsp;
         <NavLink to="/Login">LOGIN</NavLink> ·&nbsp;
-        <NavLink to="/Dashboard">DASHBOARD</NavLink>
+        <NavLink to="/Dashboard/Dashboard">DASHBOARD</NavLink>
         
       </div>
     );  

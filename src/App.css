@@ -6,6 +6,19 @@
   padding: 16px;
 }
 
+#mainNav a{
+  text-decoration: none;
+}
+
+
+#mainNav a:active{color: #551889;
+}
+
+#mainNav .active{
+  font-weight: 500;
+  text-decoration: underline;
+}
+
 #searchButton {
   height: 56px;
   

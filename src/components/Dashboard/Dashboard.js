@@ -22,18 +22,6 @@ import Chart from './Chart';
 import Upload from './Upload';
 import Orders from './Orders';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://magnet.market/">
-        Magnet Market
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -193,7 +181,6 @@ export default function Dashboard() {
             </Grid>
           </Grid>
         </Container>
-        <Copyright />
       </main>
     </div>
   );

@@ -13,17 +13,6 @@ import Link from '@material-ui/core/Link';
 import TextField from '@material-ui/core/TextField';
 import logo from '../images/logo.svg'
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://magnet.market/">
-        Magnet Market
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -145,19 +134,7 @@ export default function Home() {
         </Container>
       </main>
 
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Terms and policies ·&nbsp;
-          News ·&nbsp;
-          Links 
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
+      
 
     </React.Fragment>
   );

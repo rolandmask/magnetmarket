@@ -6,21 +6,15 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Upload from './ListingUpload';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://magnet.market/">
-        Magnet.Market
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -45,6 +39,12 @@ const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  card: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 160,
+  },
 }));
 
 
@@ -59,24 +59,66 @@ export default function Listing() {
       <Typography variant="h6" gutterBottom>
         Listing Form
       </Typography>
-      <Grid container spacing={3}>
-             
+      <Grid container spacing={3} style={{marginTop:'20px'}}>
+
+      <Grid item xs={12} sm={6}>
+      <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+        />
+      </CardActionArea>
+
+      <CardActions>
+        <Button size="small" color="primary">
+          + ADD PHOTO
+        </Button>
+     </CardActions>
+
+    </Card>
+        </Grid>
         <Grid item xs={12} sm={6}>
+        <Upload/>
+        </Grid>
+             
+      <Grid item xs={12} sm={6}>
           <TextField
+            
             required
             label="ITEM NAME"
             fullWidth
+            variant="outlined"
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            label="PRICE"
+            fullWidth
+            variant="outlined"
           />
         </Grid>
                 <Grid item xs={12} sm={6}>
           <TextField
             required
-            label="PRICE"
+            label="QUANTITY"
             fullWidth
+            variant="outlined"
           />
         </Grid>
         <Grid item xs={12} >
-          <TextField  label="DESCRIPTION" fullWidth />
+        <TextField
+        label="DESCRIPTION"
+        multiline
+        rows="4"
+        margin="normal"
+        variant="outlined"
+        fullWidth
+      />
         </Grid>
         
         <Grid item xs={12} >
@@ -98,7 +140,6 @@ export default function Listing() {
       </Grid>
     </React.Fragment>
       <Box mt={8}>
-      <Copyright />
     </Box>
     </div>
   );

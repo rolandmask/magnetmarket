@@ -4,7 +4,7 @@ const Error = () => {
 
     return (
       <div>
-        <p>Error</p>
+        <p>Error! Page You are looking for does not exist.</p>
       </div>
     );
 

@@ -19,18 +19,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://magnet.market/">
-        Magnet.Market
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
-
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
@@ -218,7 +206,6 @@ export default function ItemPage() {
       </Grid>
     </React.Fragment>
     <Box mt={8}>
-        <Copyright />
     </Box>
     </div>
   );
