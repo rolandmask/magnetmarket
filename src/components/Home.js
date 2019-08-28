@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 import TextField from '@material-ui/core/TextField';
 import logo from '../images/logo.svg'
 
@@ -19,8 +18,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
   },
   heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    backgroundColor: "white",
+    padding:"50px",
+    width:"100%",
+    margin:"auto",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '46.25%', // 16:9
   },
   cardContent: {
     flexGrow: 1,
@@ -44,6 +45,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+
 }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -57,81 +59,84 @@ export default function Home() {
       
       <main>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            
-          <center><img src={logo} alt="HTML5" width={100} height={100}></img></center>
+        <div style={{width:"100vw", margin:"auto"}}>
+          <div className={classes.heroContent}>
+            <Container maxWidth="sm">
+              
+            <center><img src={logo} alt="HTML5" width={100} height={100}></img></center>
 
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-               <TextField
-                  id="outlined-search"
-                  label="Search"
-                  type="search"
-                  className={classes.textField}
+              <div className={classes.heroButtons}>
+                <Grid container spacing={2} justify="center">
+                  <Grid item>
+                <TextField
+                    label="Search"
+                    type="search"
+                    variant="outlined"
+                    style={{width:"20vw"}}
+                />
+                <Button id="searchButton" variant="contained" color="primary" className={classes.button}>
+                    SEARCH
+                </Button>
+                  </Grid>
+                  <Grid item>
                   
-                  variant="outlined"
-               />
-               <Button id="searchButton" variant="contained" color="primary" className={classes.button}>
-                  SEARCH
-              </Button>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                 
-                </Grid>
+              </div>
+            </Container>
+          </div>
+
+          <div style={{width:"80vw", margin:"auto"}}>
+            <Container className={classes.cardGrid} maxWidth="1">
+              <span style={{padding:'10px', textAlign:'left'}}>RECOMMENDED LISTINGS</span>
+              {/* End hero unit */}
+
+              {/* Listings */}
+              <Grid container spacing={4} style={{padding:'10px'}}>            
+                {cards.map(card => (
+                  <Grid item key={card} xs={6} sm={6} md={3}>
+                    <Card className={classes.card}>
+                      <CardMedia
+                        className={classes.cardMedia}
+                        image="https://source.unsplash.com/1600x900/?sell"
+                        title="Image title"
+                      />
+                      <CardContent className={classes.cardContent}>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          Item
+                        </Typography>
+                        <Typography>
+                          Section to describe the content.
+                        </Typography>
+                        <Typography>
+                          <strong>1000 MAG</strong>
+                        </Typography>
+                      </CardContent>
+                      <CardActions>
+                        <Button 
+                        size="small" 
+                        color="primary"
+                        style={{
+                          backgroundColor: "#5fc092",
+                          color:'white'
+                      }}>
+                          BUY
+                        </Button>
+                        <Button 
+                        size="small" 
+                        color="primary">
+                          VIEW
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </Grid>
+                ))}
               </Grid>
-            </div>
-          </Container>
+              {/* End of listings */}
+
+            </Container>
+          </div>
         </div>
-        <Container className={classes.cardGrid} maxWidth="1">
-        <span style={{padding:'10px', textAlign:'left'}}>RECOMMENDED LISTINGS</span>
-          {/* End hero unit */}
-
-          {/* Listings */}
-          <Grid container spacing={4} style={{padding:'10px'}}>            
-            {cards.map(card => (
-              <Grid item key={card} xs={6} sm={6} md={3}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/1600x900/?sell"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Item
-                    </Typography>
-                    <Typography>
-                      Section to describe the content.
-                    </Typography>
-                    <Typography>
-                      <strong>1000 MAG</strong>
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button 
-                    size="small" 
-                    color="primary"
-                    style={{
-                      backgroundColor: "#5fc092",
-                      color:'white'
-                  }}>
-                      BUY
-                    </Button>
-                    <Button 
-                    size="small" 
-                    color="primary">
-                      VIEW
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-          {/* End of listings */}
-
-        </Container>
       </main>
 
       
